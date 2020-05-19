@@ -63,7 +63,7 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
         {
-            var evenNumbers = data.Select(number => number % 2);
+            var evenNumbers = data.Where(number => number % 2 == 0);
             return evenNumbers;
         }
 
@@ -75,7 +75,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var evenNumberIndex = data.Where((data, index) => index % 2 == 0);
+            return evenNumberIndex;
         }
 
 
@@ -94,7 +95,7 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
         {
-            throw new System.NotImplementedException();
+            return data.Where(movie => movie.Year == year && movie.Score > 90).Select(movie => movie.Name);
         }
 
 
@@ -104,7 +105,8 @@ namespace DotnetIteration
         // 
         public static bool EveryoneIsOdd(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var oddNumbers = data.All(odds => odds % 2 == 1);
+            return oddNumbers;
         }
 
 
@@ -115,7 +117,8 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var theNeedle = data.Find(phrase => phrase.Contains("needle"));
+            return theNeedle;
         }
 
 
@@ -126,7 +129,8 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var theNeedleIndex = data.FindIndex(index => index.Contains("needle"));
+            return theNeedleIndex;
         }
 
 
@@ -137,7 +141,8 @@ namespace DotnetIteration
         // 
         public static bool SomeoneToLove(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var loveMe = data.Any(phrase => phrase.Count() == 4);
+            return loveMe;
         }
     }
 }

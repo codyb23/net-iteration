@@ -46,7 +46,7 @@ namespace DotnetIteration
         }
 
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void OnlyTheEvenIndexedSurvive()
         {
             var data = new List<int> { 31, 67, 64, 96, 14, 24, 43, 51, 48, 80, 58, 43, 64, 84, 98, 99, 69, 93, 5, 32, 29, 4, 28, 18, 86, 22, 20, 74, 35, 27, 85, 79, 65, 32, 56, 94, 93, 20, 29, 22, 72 };
@@ -55,7 +55,7 @@ namespace DotnetIteration
         }
 
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void BestMovieOfTheYear()
         {
             var data = new List<Movie> {
@@ -79,7 +79,7 @@ namespace DotnetIteration
 
 
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void EveryoneIsOdd()
         {
             var trueData = new List<int> { 9, 15, 27, 101, 33 };
@@ -88,7 +88,7 @@ namespace DotnetIteration
             Assert.False(Iteration.EveryoneIsOdd(falseData));
         }
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void FindTheNeedle()
         {
             var data = new List<string> { "one", "time", "there was a needle at", "the market" };
@@ -97,7 +97,7 @@ namespace DotnetIteration
         }
 
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void FindTheNeedleIndex()
         {
             var data = new List<string> { "one", "time", "there was a needle at", "the market" };
@@ -106,7 +106,7 @@ namespace DotnetIteration
         }
 
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void SomeoneToLove()
         {
             var falseData = new List<string> { "how", "now", "brown", "cow" };
