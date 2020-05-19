@@ -26,7 +26,8 @@ namespace DotnetIteration
         //
         public static IEnumerable<string> Yelling(List<string> words)
         {
-            throw new System.NotImplementedException();
+            var newListOfYelling = words.Select(word => word.ToUpper());
+            return newListOfYelling;
         }
 
 
@@ -37,7 +38,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> Double(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            var newListOfNumbers = numbers.Select(number => number * 2);
+            return newListOfNumbers;
         }
 
 
@@ -49,7 +51,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> StringyIndexes(List<string> data)
         {
-            throw new System.NotImplementedException();
+            var newListOfStrings = data.Select((data, index) => $"{data} is at index {index}");
+            return newListOfStrings;
+
         }
 
 
@@ -59,7 +63,8 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
         {
-            throw new System.NotImplementedException();
+            var evenNumbers = data.Select(number => number % 2);
+            return evenNumbers;
         }
 
 
